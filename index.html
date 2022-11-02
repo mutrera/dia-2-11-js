@@ -42,6 +42,7 @@ alert ("Hola")
 function mostraInformacio(laVariable){
     console.log ('Contingut:', laVariable)
     console.log('Tipus', typeof laVariable)
+    console.log('És array:',Array.isArray(laVariable))
 }
 var variable1 ="Jordi"
 var variable2 = 13
@@ -65,5 +66,20 @@ mostraInformacio(suma2)
 </body>
 <script>
     console.log('Després del body')
+
+// pots definir una variable que és una array
+var noms = ['jordi', 'pere', 'laura', 32]
+// pots definir una variable que és un objecte
+var pers ={
+    nom: "Jordi",
+    dni: "2333333P"
+
+}
+
+mostraInformacio(noms)
+mostraInformacio(pers)
+
+
+
 </script>
 </html>
