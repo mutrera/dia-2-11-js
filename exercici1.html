@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numeros =[40,30,12,200,4000,15]
+        //Trobar(imprimir a la consola) el numero mes alt
+        // var a =23  var b =12    a > b 
+        //var esMesGran = a > b
+
+        var max = 0
+        for(var posicio = 0; posicio<numeros.length; posicio++){
+             var elementActual = numeros[posicio]
+             console.log(
+                "Estem processant l'element", posicio, "que te el valor",
+                numeros[posicio], "el maxim és", max)
+             
+             if(elementActual>max){
+                max = elementActual
+             }
+        }
+        console.log("El valor màxim és", max)
+
+        var min = Number.MAX_VALUE
+        for(var posicio = 0; posicio<numeros.length; posicio++){
+             var elementActual = numeros[posicio]
+             console.log(
+                "Estem processant l'element", posicio, "que te el valor",
+                numeros[posicio], "el minim és", min)
+             
+             if(elementActual<min){
+                min = elementActual
+             }
+        }
+        console.log("El valor minim és", min)
+
+//altra manera
+var max2 = Number.MIN_VALUE
+// element és un parametre (el número que estem mirant actualment)
+numeros.forEach(function(element){
+    if(element>max2){
+            max2 =element
+        }
+    })
+    console.log("El valor màxim és", max2)
+        
+
+    
+
+
+    </script>
+</head>
+<body>
+    <h1>Exercici 1</h1>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var coses =["Jordi", 3, "Laura", 2,3,"Dani", "Sandra, 3, 6"]
+        var numeroDeTextes;
+        var numeroDeNumeros;
+        var noms; //array
+        var numeros; //array
+
+        // //Contar els textos
+        // //Contar els numeros
+        // //(mirem si es un string)
+        // coses.forEach(function(element, posicio){
+        //     if (typeof(element) =='string'){
+        // //(cometes simples, augmentem el contador)
+        //         numeroDeTextes = numeroDeTextes+1
+        //     }
+        //(altra manera)
+        function contaTextes(el,pos){
+            if(typeof(el) == 'string'){
+                numeroDeTextes = numeroDeTextes+1
+            }
+        }
+        coses.forEach(contaTextes)
+            
+
+        })
+        //Fer dos arrays, un amb els texts i l'altre amb els numeros
+    </script>
+
+</head>
+<body>
+    <h1>Exercici 3</h1>
+</body>
+</html>

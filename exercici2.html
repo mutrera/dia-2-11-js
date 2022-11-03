@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var noms = ["Jordi", "Dani","Laura", "Eva"]
+
+    //Trobar la posició de l'element"Laura"  
+    noms.forEach(function(el, pos){
+
+     if(el === "Laura"){
+            console.log("La posició és:", pos)
+        }
+    })
+   
+    // altra manera la variablr indexOf ens torna la posició del 
+    // primer element "Laura" en el cas de que hi hagui dos
+    // el altre metode torna les dues posicions en el cas de que haguessin
+    // 2 "Laures"
+    
+    posicion = noms.indexOf("Laura")
+    console.log ("La posición es:", posicion)
+        </script>
+</head>
+<body>
+    <h1>Exercici 2</h1>
+    
+</body>
+</html>
