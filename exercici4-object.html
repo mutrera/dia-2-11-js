@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objecte (exercici-4)</h1>
+    <div id="car1">valor inicial</div>
+    <script>
+       // console.log (document.getElementById("cotxe").innerHTML)
+        document.getElementById("car1").innerHTML="Fiat 500"
+      // Crear un objecte ES5
+      var jordi ={}
+      jordi.nom = "Jordi"
+      jordi.edat = 33
+      jordi.descripcio = function () {
+        return this.nom + "té" + this.edat +
+ "anys"
+      }
+
+      var joan ={
+        nom:"joan",
+        cognom:"perez",
+        edat:36,
+        descripcio: function () {
+        return this.nom + "té" + this.edat +
+ "anys"
+
+      },
+      // ES6 (estalviem la fuction i els punts)
+      descripcio2(){
+        return this.nom + "té" + this.edat +
+ "anys"
+      },
+      nomComplet(){
+        return this.nom + "" + this.cognom +
+ "anys"
+
+      }
+    }
+
+    console.log(
+        joan.nomComplet(),
+        joan.edat
+
+    )
+//fer 1 objectes (cotxes) amb propietat model, marca i any
+//ha de ternir 3 metodes:
+// descripcio-text amb totes les propietats del cotxe
+// esClassic (ens ha de tornar si te mes de 25 anys)
+//edat (edat del cotxe)
+//valor (el valor del cotxe preu/anys del cotxe)
+
+
+var car1 ={marca:"Renault", model: "Clio", any: 1990, preu: 12000,
+edat:function(){
+    return 2022-this.any
+},
+valor:function(){
+    return this.preu/this.edat()
+
+},
+descripcioCar1(){
+    return  "La Marca del cotxe1 és " +this.marca + ",  el model és " + this.model+ " ,és de l'any " + this.any +  " i el seu preu inicial és de " + this.preu+ " euros"
+},
+crearDivPerWeb:function(){
+    // document.write("El cotxe es de la marca "+ this.marca)
+return "<div>"
+    + "<h1>" + this.marca+"</h1>"
+    + "<p>" +this.descripcioCar1()+ "</p>"
+    + "</div>"
+
+}
+}
+console.log (car1.crearDivPerWeb)
+document.getElementById("car1").innerHTML = car1.crearDivPerWeb()
+
+
+console.log(
+    car1.descripcioCar1()
+)
+
+if (car1.any<1997){
+    console.log("El cotxe és un clássic")
+
+}else{
+    console.log("El cotxe no és un clássic")
+
+}
+
+console.log(
+    car1.any, "El cotxe té " + car1.edat()+ " anys ", "El valor del cotxe és  "+ car1.valor()
+)
+
+
+</script>
+</body>
+</html>
