@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercici6-contador-button</h1>
+    <div id="contador">0</div>
+    
+  
+
+    <button onclick="augmentar()"> augmentar </button>
+    <button onclick="disminuir()"> restar </button>
+    <button onclick="stop()"> parar </button>
+
+   
+    <script>
+        // FER UN CONTADOR
+        // Botó que executi una funció de js
+        //Variable que conté  el valor actual del contador
+        //Dins de la funcio que fem, augmentar el valot de la variable en i
+        //i actualitzar l'html
+var contador = 0
+    function augmentar(){
+        //augmentem el valor
+        contador = contador +1
+        // altres maneres:
+        //  contador ++
+        // contador += 1
+        document.getElementById("contador").innerHTML = contador
+
+    }
+// FER UN BOTÓ PER DISMINUIR
+
+var contador =0
+function disminuir(){
+    contador -= 1 
+    document.getElementById("contador").innerHTML = contador
+}
+//podriem fer una funció per totes dues operacions
+// function actualitzarComptador(){
+//     document.getElementById("resta").innerHTML = contador
+// }
+
+// CONTADOR DE SEGONS (timmer)-> posem funció i quan s'ha d'executat
+// id =identificadord, 
+ var id1= setInterval(augmentar, 1000)
+//  var id2= setInterval(disminuir, 2000)
+
+//fem una funció per parar el timmer i un botó per parar
+function stop(){
+    clearInterval(id1)
+}
+
+        //variable global (dins de js) vs variable local (context local dins de la funció)
+    // var variableGlobal = "global"
+    // function prova(){
+    //     console.log("des de dins de la funció", )
+    // }
+    
+       
+
+     </script>
+</body>
+</html>
